@@ -1,0 +1,58 @@
+{
+    "name": "chrome-extension-bookmark-referrer",
+    "version": "0.0.1",
+    "description": "Auto bookmarks referrer, chrome-extension.",
+    "main": "",
+    "scripts": {
+        "tsnode": "tsc ./config/manifest/index.ts && tsc ./config/plugin/WebpackChromeManifestPlugin.ts",
+        "bd": "webpack-dev-server --config ./webpack.config.js --env.env=dev",
+        "bp": "npm run tsnode && webpack -p  --env.env=prod",
+        "debug": "npm run tsnode && node-nightly --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nseepana/chrome-extension-bookmark-referrer.git"
+    },
+    "keywords": [
+        "page-referrer",
+        "referrer",
+        "bookmarking",
+        "bookmark",
+        "chrome-extension"
+    ],
+    "author": "naresh@seepana.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nseepana/chrome-extension-bookmark-referrer/issues"
+    },
+    "homepage": "https://github.com/nseepana/chrome-extension-bookmark-referrer#readme",
+    "devDependencies": {
+        "@types/chrome": "0.0.88",
+        "@types/node": "^12.7.3",
+        "@types/react": "^16.9.2",
+        "@types/react-dom": "^16.9.0",
+        "@types/webpack": "^4.39.1",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^3.2.0",
+        "fs-extra": "^8.1.0",
+        "html-webpack-plugin": "^3.2.0",
+        "prettier": "^1.18.2",
+        "style-loader": "^1.0.0",
+        "ts-loader": "^6.0.4",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.19.0",
+        "tslint-react": "^4.0.0",
+        "typescript": "^3.7.0-dev.20190824",
+        "url-loader": "^2.1.0",
+        "webpack": "^4.39.2",
+        "webpack-cli": "^3.3.7",
+        "webpack-dev-server": "^3.8.0",
+        "webpack-merge": "^4.2.1"
+    },
+    "dependencies": {
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    }
+}
